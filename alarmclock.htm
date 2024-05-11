@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alarmclock</title>
+
+    <link rel="icon" type="image/x-icon" href="./mvc/view/img/ready.png?since=202402271024&svnrevision=001">
+    <link rel="stylesheet" href="./mvc/view/css/style.css?since=202402271024&svnrevision=001">
+</head>
+
+<body>
+    <!-- 
+
+        Regarding the used applications file- and code-structure,
+        (my favourite of all times), you can find details 
+        and a template of it on github:
+        https://github.com/Reinerth/application-template-MVC-Pattern
+
+
+        Regarding the application:
+        An alarmclock based on JavaScript.
+        Yet, tested only with edge-browser.
+    -->
+
+    <!-- The DOM-elements (plus CSS and IMG) represent the VIEW -->
+    <div id="maincontainer">
+
+        <div id="activated" class="activated"><div id="alarmOn">ALARM ON</div></div>
+        <div id="deactivate" class="mySwitch silver">deactivate for now</div>
+
+        <div id="lefttimecontainer" class="lefttimecontainer">
+            <div class="lefttimetitle">left time</div>
+            <div id="lefttimedays">00</div>
+            <div id="lefttimestunden">00</div>
+            <div id="lefttimeminutes">00</div>
+        </div>
+
+        <hr id="divider"><br>
+
+        <div id="alarmContainer">
+            <div id="weekcontainer">
+                <input type="checkbox" class="daycontainermark" name="monday" value="monday">       <div class="daycontainer"><div class="nightSelected" id="nightSelectedMonday">x</div>   <div class="day" id="monday">monday</div></div>
+                <input type="checkbox" class="daycontainermark" name="tuesday" value="tuesday">     <div class="daycontainer"><div class="nightSelected" id="nightSelectedTuesday">x</div>  <div class="day" id="tuesday">tuesday</div></div>
+                <input type="checkbox" class="daycontainermark" name="wednesday" value="wednesday"> <div class="daycontainer"><div class="nightSelected" id="nightSelectedWednesday">x</div><div class="day" id="wednesday">wednesday</div></div>
+                <input type="checkbox" class="daycontainermark" name="thursday" value="thursday">   <div class="daycontainer"><div class="nightSelected" id="nightSelectedThursday">x</div> <div class="day" id="thursday">thursday</div></div>
+                <input type="checkbox" class="daycontainermark" name="friday" value="friday">       <div class="daycontainer"><div class="nightSelected" id="nightSelectedFriday">x</div>   <div class="day" id="friday">friday</div></div>
+                <input type="checkbox" class="daycontainermark" name="saturday" value="saturday">   <div class="daycontainer"><div class="nightSelected" id="nightSelectedSaturday">x</div> <div class="day" id="saturday">saturday</div></div>
+                <input type="checkbox" class="daycontainermark" name="sunday" value="sunday">       <div class="daycontainer"><div class="nightSelected" id="nightSelectedSunday">x</div>   <div class="day" id="sunday">sunday</div></div>
+            </div>
+
+            <div id="time">
+                <select id="stunden">
+                    <option value="00">00</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                </select>
+
+                <select id="minutes"></select>
+
+            </div>
+
+
+            <div id="testAlarm" class="mySwitch">test sound</div>
+            <div id="setLightAlarm" class="mySwitch">night</div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- The Center for Configuration and Model must be included first. -->
+    <script src="./mvc/model/alarmclock.js?since=202402271024&svnrevision=001"></script>
+
+
+    <!-- The Classes / Modules. The order of including the modules doesnt matter. -->
+    <script src="./usersettings.js?since=202402271024&svnrevision=001" onload="this.src='./usersettings.js?avoidCacheOnReload='+Math.random()"></script>
+    <script src="./mvc/controller/controller.js?since=202402271024&svnrevision=001"></script>
+
+    <!--  
+        Workaround regarding the usersettings.js: 
+        When user has loaded already the app in browser, 
+        and then he changes some settings in the file usersettings.js 
+        the browser would remember the file as previously loaded, 
+        except user would delete the browsers cache. 
+        Now the browser retrieves the file on every F5-reload again, due to a different URL (different parameter-value).
+        From my understanding this loads the file like following:
+        The browser loads initialy the file from the given src usersettings.js.
+        When load is finished, the src gets changed to usersettings.js+randomnumber,
+        even the file is already loaded.
+        On pressing the F5-key/reload, the browser now retrievs the file again due to the changed URL.
+    -->
+
+
+    <script>
+
+       /**
+        * INVOKE public functions from the classes of the application.
+        */
+       alarmclock.init();
+
+       /**
+        * In the WINDOW-object (in console of the Developer Tools F12) we can see our application ("alarmclock").
+        * SETTINGS are always accessible (the settings are in alarmclock.js)
+        */
+       console.log(window.alarmclock);
+       console.log(window.alarmclock.version);
+
+    </script>
+</body>
+
+</html>

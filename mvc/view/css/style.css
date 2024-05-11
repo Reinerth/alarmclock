@@ -1,0 +1,292 @@
+*{
+    font-family: system-ui;
+    font-size:2.7vh;
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    height: 100%;
+    width: 100%;
+    background-color: #6faf52;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.night{
+    background-color: #000000;
+    color: #212121;
+}
+select{
+    height: 50px;
+    width: 160px;
+    text-indent: 20px;
+    margin-bottom: 9px;
+    float: left;
+}
+input{
+    height: 32px;
+    width: 100%;
+    text-indent: 5px;
+}
+
+
+#maincontainer{
+    position:relative;
+    width:413px;
+    height:615px;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#activated{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 32px;
+    top: 43px;
+}
+#alarmOn{
+    display: none;
+    position: relative;
+    font-size: 3vh;
+    text-align: center;
+    font-weight: 500;
+}
+.off{
+    text-shadow: 0px 0px 0px white;
+}
+.on{
+    text-shadow: 0px -5px 16px white;
+}
+.yellow{
+    color:yellow;
+}
+.red{
+    color:red;
+}
+
+
+
+#deactivate{
+    position:relative;
+    width:400px;
+    height:69px;
+    margin-top:50px;
+    font-weight:bold;
+    line-height:69px;
+    border-radius:55px;
+    padding:5px;
+}
+.void{
+    color: #000000;
+    box-shadow: 3px 3px 3px #000000 !important;
+}
+.void:hover{
+    box-shadow: 3px 3px 3px #000000;
+}
+.silver{
+    color: silver;
+    box-shadow: 3px 3px 3px silver;
+}
+.silver:hover{
+    box-shadow: 3px 3px 3px silver;
+}
+
+
+
+
+.hide{
+    display: none;
+}
+.lefttimecontainer{
+    position:relative;
+    float:left;
+    width:450px;
+    height:100px;
+}
+.lefttimetitle{
+    position:relative;
+    float:left;
+    top: 31px;
+    text-align: left;
+    width:150px;
+    font-weight:bold;
+    font-size: 30px;
+}
+#lefttimedays{
+    position:relative;
+    top: 9px;
+    float:left;
+    text-align:left;
+    width:90px;
+    font-size: 60px;
+}
+#lefttimestunden{
+    position:relative;
+    top: 9px;
+    float:left;
+    text-align:left;
+    width:90px;
+    font-size: 60px;
+}
+#lefttimeminutes{
+    position:relative;
+    top: 9px;
+    float:left;
+    text-align:left;
+    width:90px;
+    font-size: 60px;
+}
+
+
+#alarmContainer{
+    position:relative;
+    top: 0px;
+    width:450px;
+    height:330px;
+    text-align:center;
+}
+.spacer{
+    top: 25px !important;
+}
+
+#time{
+    position:relative;
+    width:180px;
+    height:110px;
+}
+
+
+#weekcontainer{
+    position:relative;
+    float:right;
+    width:250px;
+    background-color: transparent;
+}
+
+
+.day{
+    position:relative;
+    width:230px;
+    height:44px;
+    margin-left:60px;
+    text-align:left;
+    cursor: pointer;
+}
+
+.nightSelected{
+    width:17px;
+    height:36px;
+    float:left;
+    visibility: hidden;
+}
+.daycontainermark{
+    width:36px;
+    height:36px;
+    float:left;
+    cursor: pointer;
+}
+.daycontainer{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+#testAlarm{
+    position:relative;
+    top: 1px;
+    width:149px;
+    height:43px;
+    font-weight:bold;
+    line-height:43px;
+    padding:5px;
+    box-shadow: 3px 3px 3px;
+}
+#testAlarm:hover{
+    box-shadow: 0px 0px 0px;
+}
+
+#skipToday{
+    position:relative;
+    top: 11px;
+    width:149px;
+    height:43px;
+    font-weight:bold;
+    line-height:43px;
+    padding:5px;
+    box-shadow: 3px 3px 3px;
+    cursor: pointer;
+}
+#skipToday:hover{
+    box-shadow: 0px 0px 0px;
+}
+
+#setLightAlarm{
+    position:relative;
+    top: 74px;
+    width:149px;
+    height:43px;
+    font-weight:bold;
+    line-height:43px;
+    padding:5px;
+    box-shadow: 3px 3px 3px;
+    cursor: pointer;
+}
+#setLightAlarm:hover{
+    box-shadow: 0px 0px 0px;
+}
+
+
+
+
+
+/* The coolest button in mankinds history ***********************************************/
+/** online-tool for generating gradients: https://www.colorzilla.com/gradient-editor/ **/
+.mySwitch{
+    font-weight: bold;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    text-align: center;
+    text-shadow: 0 1px 0px #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0;
+    margin-bottom: 2px;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border-top-color: #aeafae;
+    border-bottom-color: #7c7e7c;
+    -webkit-box-shadow: inset 0px 1px 0px #fbfbfb, inset 1px 0px 0px #ededed, inset 0px -1px 0px #dfdfdf, inset -1px 0px 0px #ededed, 0px 1px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: inset 0px 1px 0px #fbfbfb, inset 1px 0px 0px #ededed, inset 0px -1px 0px #dfdfdf, inset -1px 0px 0px #ededed, 0px 1px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0px 1px 0px #fbfbfb, inset 1px 0px 0px #ededed, inset 0px -1px 0px #dfdfdf, inset -1px 0px 0px #ededed, 0px 1px 0px rgba(0, 0, 0, 0.15);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f8f8', endColorstr='#bdbdbd');
+    background-image: -moz-linear-gradient(top, #f8f8f8, #bdbdbd);
+    background-image: -ms-linear-gradient(top, #f8f8f8, #bdbdbd);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#f8f8f8), to(#bdbdbd));
+    background-image: -webkit-linear-gradient(top, #f8f8f8, #bdbdbd);
+    background-image: -o-linear-gradient(top, #f8f8f8, #bdbdbd);
+    background-image: linear-gradient(top, #f8f8f8, #bdbdbd);
+}
+.mySwitch:hover{
+    -webkit-box-shadow: inset 0px 1px 0px #fcfcfc, inset 1px 0px 0px #f0f0f0, inset 0px -1px 0px #e4e4e4, inset -1px 0px 0px #f0f0f0, 0px 1px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: inset 0px 1px 0px #fcfcfc, inset 1px 0px 0px #f0f0f0, inset 0px -1px 0px #e4e4e4, inset -1px 0px 0px #f0f0f0, 0px 1px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0px 1px 0px #fcfcfc, inset 1px 0px 0px #f0f0f0, inset 0px -1px 0px #e4e4e4, inset -1px 0px 0px #f0f0f0, 0px 1px 0px rgba(0, 0, 0, 0.15);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f8f8', endColorstr='#c9c9c9');
+    background-image: -moz-linear-gradient(top, #f8f8f8, #c9c9c9);
+    background-image: -ms-linear-gradient(top, #f8f8f8, #c9c9c9);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#f8f8f8), to(#c9c9c9));
+    background-image: -webkit-linear-gradient(top, #f8f8f8, #c9c9c9);
+    background-image: -o-linear-gradient(top, #f8f8f8, #c9c9c9);
+    background-image: linear-gradient(top, #f8f8f8, #c9c9c9);
+}
